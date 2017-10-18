@@ -179,8 +179,9 @@ export class ServerBuilder {
 		return this;
 	}
 
-	session(config: Partial<SessionConfig> = {}){
+	session(config: Partial<SessionConfig> = {}): this{
 		this._session = config;
+        return this;
 	}
 
 	cors(cors: boolean | Cors.Options): this {
