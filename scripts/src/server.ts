@@ -108,7 +108,7 @@ function parse(ctx: Router.IRouterContext): Request {
 	}
 
 	return {
-		session: ctx.session,
+		session: ctx.session || undefined,
 		headers,
 		path: ctx.path,
 		data: createRequestData(body, path, search)
